@@ -1,55 +1,137 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* 색상 변수 정의 */
+:root {
+  --bg-light: #f3f3f3;
+  --text-light: #1f1f1f;
+  --accent-light: #0061ff;
+
+  --bg-dark: #1f1f1f;
+  --text-dark: #f3f3f3;
+  --accent-dark: #00bfff;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color:cornsilk;
-    padding: 10px 0;
-    z-index: 1000;
+/* 라이트 모드 */
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
 }
 
-header .logo img{
-    width: 5%;
-    height: auto;
-    margin-left: 20px;
+body.light .sidebar {
+  background-color: #ffffff;
 }
 
-header nav ul{
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
+body.light .main {
+  background-color: var(--bg-light);
 }
 
-header nav ul li {
-    margin: 0 15px;
+/* 다크 모드 */
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
 }
 
-header nav ul li a {
-    color: black;
-    text-decoration: none;
-    font-size: 16px;
+body.dark .sidebar {
+  background-color: #2a2a2a;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
-    color:darkgray;
+body.dark .main {
+  background-color: var(--bg-dark);
 }
 
-main {
-    margin-top: 120px;
-    padding: 20px;
+/* 전체 레이아웃 */
+body {
+  margin: 0;
+  display: flex;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  position: relative;
 }
 
-footer {
-    background:#333;
-    color: cornsilk;
-    text-align: center;
-    padding: 10px;
+/* 사이드바 */
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  color: inherit;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 로고 영역 */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+/* 메뉴 리스트 */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.sidebar li:hover {
+  color: var(--accent-light);
+}
+
+body.dark .sidebar li:hover {
+  color: var(--accent-dark);
+}
+
+/* 메인 콘텐츠 영역 */
+.main {
+  flex: 1;
+  padding: 30px;
+  color: inherit;
+  overflow-y: auto;
+}
+
+/* 블로그 글 스타일 */
+.post {
+  margin-bottom: 20px;
+}
+
+.post h3 {
+  margin: 0 0 5px;
+}
+
+/* 숨김 처리 */
+.hidden {
+  display: none;
+}
+
+/* 오른쪽 하단 테마 토글 버튼 */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 14px 14px;
+  background-color: transparent;
+  border: 1px solid currentColor;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 10px;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: scale(1.05);
 }

@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C.K 인터네셔널</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C.K International</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="https://placehold.co/400" alt="로고">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="product.html">Products</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="description">
-            <h1>C.K 인터네셔널</h1>
-            <p>온라인 마케팅 & 웹 마케팅 최적화 전문 기업</p>
-            <p>고객을 최우선으로 생각하는 C.K International 입니다.</p>
-            <br>
-            <h1>서비스 소개</h1>
-            <ul>
-                <li>SEO 최적화</li>
-                <li>소셜 미디어 마케팅</li>
-                <li>콘텐츠 마케팅</li>
-                <li>웹사이트 최적화 솔루션 제공</li>
-            </ul>
-            <br>
-            <p>단기간의 성과가 아닌 지속적이고 자립 가능한 솔루션을 제공합니다.</p>
-            <p>고객과 함께 성장하는 C.K International</p>
-        </section>
-    </main>
-    <footer>
-        &copy; 2023-2025 C.K 인터네셔널 All Rights Reserved
-        <p>솔루션 문의 상담: 24/7</p>
-    </footer>
+<body class="light">
+  <div class="sidebar">
+    <div class="logo" onclick="goHome()">
+      <img src="logo.png" alt="Cho 로고" />
+      <h2>C.K International</h2>
+    </div>
+    <ul>
+      <li onclick="showSection('tech')">Home</li>
+      <li onclick="showSection('life')">Producs</li>
+      <li onclick="showSection('ideas')">Services</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div id="tech" class="section">
+      <div class="post">
+        <h3>React로 사이드바 만들기</h3>
+        <p>React 컴포넌트를 활용해 동적인 UI를 구성하는 방법을 소개합니다.</p>
+      </div>
+    </div>
+
+    <div id="life" class="section hidden">
+      <div class="post">
+        <h3>고양시에서의 하루</h3>
+        <p>일산 호수공원에서 산책하며 느낀 점들을 공유합니다.</p>
+      </div>
+    </div>
+
+    <div id="ideas" class="section hidden">
+      <div class="post">
+        <h3>AI와 창작의 미래</h3>
+        <p>인공지능이 예술과 창작에 어떤 영향을 줄 수 있을지에 대한 생각.</p>
+      </div>
+    </div>
+  </div>
+
+  <button class="theme-toggle" onclick="toggleTheme()">🌙 다크 모드</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
