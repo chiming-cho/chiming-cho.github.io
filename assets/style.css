@@ -38,10 +38,18 @@ body.dark .main {
 }
 
 /* 전체 레이아웃 */
+
+@font-face {
+  font-family: "SegoeUIVariable";
+  src: url("./assets/SegoeUIVariableStaticDisplay.ttf") format("truetype");
+}
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov.min.css");
+
 body {
   margin: 0;
   display: flex;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'SegoeUIVariable', "Pretendard GOV", sans-serif;
   height: 100vh;
   position: relative;
 }
@@ -126,12 +134,16 @@ body.dark .sidebar li:hover {
   border: 1px solid currentColor;
   color: inherit;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 15px;
   z-index: 1000;
-  transition: background-color 0.3s;
+  transition: background-color 0.2s;
 }
 
 .theme-toggle:hover {
   background-color: rgba(0, 0, 0, 0.05);
   transform: scale(1.05);
+  transition: background-color 0.2s, transform 0.2s;
 }
+
+/* 다크 테마에서 토글 버튼 색상 바꾸기 (밝게) */
+/* unhover 애니메이션 0.3s 만들기 */

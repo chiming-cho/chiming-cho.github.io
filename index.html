@@ -4,46 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>C.K International</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="script.js"></script>
 </head>
 <body class="light">
   <div class="sidebar">
     <div class="logo" onclick="goHome()">
-      <img src="logo.png" alt="Cho 로고" />
+      <img src="logo.png" alt="logo" />
       <h2>C.K International</h2>
     </div>
     <ul>
-      <li onclick="showSection('tech')">Home</li>
-      <li onclick="showSection('life')">Producs</li>
-      <li onclick="showSection('ideas')">Services</li>
+      <li onclick="showSection('home')">홈</li>
+      <li onclick="showSection('product')">제품</li>
+      <li onclick="showSection('service')">서비스</li>
+      <li onclick="showSection('contact')">연락</li>
     </ul>
   </div>
-
   <div class="main">
-    <div id="tech" class="section">
+    <div id="home" class="section">
       <div class="post">
-        <h3>React로 사이드바 만들기</h3>
-        <p>React 컴포넌트를 활용해 동적인 UI를 구성하는 방법을 소개합니다.</p>
+        <h3>Home</h3>
+        <p>메인 페이지</p>
       </div>
     </div>
 
-    <div id="life" class="section hidden">
+    <div id="product" class="section hidden">
       <div class="post">
-        <h3>고양시에서의 하루</h3>
-        <p>일산 호수공원에서 산책하며 느낀 점들을 공유합니다.</p>
+        <h3>제품</h3>
+        <p>제품 리스트 상세설명 등등..</p>
+        <ul>
+          <li>Product A</li>
+          <li>Product B</li>
+          <li>Product C</li>
+        </ul>
       </div>
     </div>
 
-    <div id="ideas" class="section hidden">
+    <div id="service" class="section hidden">
       <div class="post">
-        <h3>AI와 창작의 미래</h3>
-        <p>인공지능이 예술과 창작에 어떤 영향을 줄 수 있을지에 대한 생각.</p>
+        <h3>서비스</h3>
+        <p>제공하는 서비스 등등..</p>
       </div>
+    </div>
+    <div id="contact" class="section hidden">
+      <div class="post">
+        <h3>연락처</h3>
+        <p>이메일: sidiousforce@gmail.com
     </div>
   </div>
 
   <button class="theme-toggle" onclick="toggleTheme()">🌙 다크 모드</button>
-
-  <script src="script.js"></script>
 </body>
 </html>

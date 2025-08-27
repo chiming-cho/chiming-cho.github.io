@@ -5,7 +5,7 @@ function showSection(id) {
 }
 
 function goHome() {
-  showSection('tech'); // 기본 섹션으로 이동
+  showSection('home');
 }
 
 function toggleTheme() {
